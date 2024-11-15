@@ -31,7 +31,7 @@ def sin(number):
     "-n",
     "--number",
     default=10,
-    help='NUMBER of steps you want to take between 0 and 2pi.',
+    help='NUMBER of steps you want to take between 0 and 2pi',
     show_default=True
 )
 
