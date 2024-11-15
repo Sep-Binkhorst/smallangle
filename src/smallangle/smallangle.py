@@ -45,5 +45,18 @@ def tan(number):
     print(df)
 
 
+@cmd_group.command()
+@click.argument("number")
+def approx(number):
+    """Determine the smallangle approximation witch the given NUMBER as epsilon.
+
+    NUMBER is the value for epsilon for which you want to calculate the smallangle approximation.
+    """
+
+    x = 0
+    while np.abs(x - np.sin(x)) <= number:
+            x += 0.001
+    print(x)
+
 if __name__ == "__main__":
     cmd_group()
